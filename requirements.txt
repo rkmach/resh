@@ -6,3 +6,4 @@ djangorestframework==3.9.3
 pytest==6.1.2
 pytest-django==4.1.0
 psycopg2==2.8.6
+django-crispy-forms==1.11.1

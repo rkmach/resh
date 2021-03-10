@@ -2,8 +2,6 @@
 
 {% load static %}
 
-{% load crispy_forms_tags %}
-
 {% block content %}
 
 <div class="container-fluid">
@@ -16,10 +14,9 @@
       <form method="POST">
         <div class="form-group">
           {% csrf_token %}
-          {{ form | crispy }}
+          {{ form.as_p }}
         </div>
-        <small id="emailHelp" class="form-text text-muted">Ainda não possui uma conta? <a href="{% url 'pages:register' %}">Registre-se</a> agora.</small>
-        <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="submit" class="btn btn-primary">Registre</button>
       </form>
     </div>
 
@@ -27,4 +24,4 @@
 </div>
   
 
-{% endblock %}
+{% endblock content %}

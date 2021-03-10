@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # apps de terceiros
     "debug_toolbar",
+    "crispy_forms",
     #my apps
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
@@ -146,3 +147,19 @@ import socket  # noqa
 
 hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+
+
+#Autenticação
+
+LOGIN_REDIRECT_URL = "../home/"
+LOGIN_URL = "../login"
+LOGOUT_REDIRECT_URL = "../login"
+
+#media
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#crispy package (forms mais elegantes)
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
