@@ -4,14 +4,17 @@
 
 {% block content %}
 
-{% if request.user.is_authenticated %}
+<div class="init">
+    <h3>Parabéns! Você está logado</h3>
+    <small>Clique em 'Ações de Usuário' caso queira alterar seus dados, fazer logout ou excluir seu cadastro.</small>
 
-<p>Seja bem-vindo</p>
+    <h3>Seus dados</h3>
+    <p>Seu nome de usuário é {{ user.get_username }}</p>
+    <p>Seu email é {{ user.email }}</p>
+    <p>Seu nome é {{ user.get_full_name }}</p>
+    <p>Sua senha(hash) é {{ user.password }}</p>
 
-{% else %}
 
-<a href="{% url 'pages:logout' %}"> Sair </a>
-
-{% endif %}
+</div>
 
 {% endblock content %}

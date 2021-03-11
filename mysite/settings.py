@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # apps de terceiros
     "debug_toolbar",
     "crispy_forms",
+    'fontawesome-free',
     #my apps
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
@@ -151,7 +152,7 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 
 #Autenticação
 
-LOGIN_REDIRECT_URL = "../home/"
+LOGIN_REDIRECT_URL = "../home"
 LOGIN_URL = "../login"
 LOGOUT_REDIRECT_URL = "../login"
 

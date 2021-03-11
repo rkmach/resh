@@ -1,5 +1,31 @@
 /* Estou usando bootstrap, mas se precisar, colocarei meu css aqui! */
 
+html, body {
+  height: 50%;
+  margin: 0;
+}
+
 .vert-cent{
   margin-top: 15%;
+}
+
+.init{
+  text-align: center;
+  margin-top: 120px;
+}
+
+.upper-footer{
+  position: relative;
+  margin-top: 50px;
+}
+
+.footer{
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+  display: block;
+  /* position: fixed; */
+  bottom: 0;
 }
